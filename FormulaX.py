@@ -13,8 +13,8 @@ FINISH_LINE = scale_image(pygame.image.load('imgs/finish.png'), 0.8)
 FINISH_LINE_POS = (500, 480)
 FINISH_LINE_MASK = pygame.mask.from_surface(FINISH_LINE)
 
-BLACK_CAR = scale_image(pygame.image.load('imgs/black-car.png'), 0.04)
-GREEN_CAR = scale_image(pygame.image.load('imgs/green-car.png'), 0.04)
+BLACK_CAR = scale_image(pygame.image.load('imgs/black-car.png'), 0.06)
+GREEN_CAR = scale_image(pygame.image.load('imgs/green-car.png'), 0.06)
 
 WIDTH, HEIGHT = TRACK.get_width(), TRACK.get_height()
 WIN = pygame.display.set_mode((WIDTH, HEIGHT))
@@ -222,8 +222,8 @@ def move_player(player_car):
 
 
 def handle_collision(player_car, computer_car, game_info):
-    if player_car.collide(TRACK_BORDER_MASK) != None:
-        player_car.bounce()
+    # if player_car.collide(TRACK_BORDER_MASK) != None:
+    #     player_car.bounce()
     
     computer_finish_poi_collide = computer_car.collide(FINISH_LINE_MASK, *FINISH_LINE_POS)
     if computer_finish_poi_collide != None:
