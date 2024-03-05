@@ -113,9 +113,9 @@ class PlayerCar(AbstractCar):
         self.move()
         
         
-    # def bounce(self):
-    #     self.vel = -self.vel
-    #     player_car.move()
+    def bounce(self):
+        self.vel = -self.vel
+        self.move()
         
         
 
